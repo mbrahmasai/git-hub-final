@@ -1,0 +1,97 @@
+git is version control system (VCS).It’s  helps you track changes to your code over time. It allows multiple developers to work on the same project without stepping on each other's toes, and it maintains a history of changes to revert back to previous versions if needed.
+
+How it works: Git runs locally on your machine. You initialize a Git repository within a project directory, and then you can commit changes, create branches, merge them, and push/pull changes to/from a remote repository.
+
+Key Features:
+
+Local version control
+Commit history
+Branching and merging
+Works offline
+
+GitHub is remote respository 
+GitHub is a web-based hosting service for Git repositories. It takes Git's capabilities and adds collaborative features, making it easier for teams to work together and share code publicly or privately.
+
+How it works: GitHub hosts your Git repositories in the cloud, allowing you to push and pull changes from the repositories. It also provides additional features like:
+
+Issue tracking (for bug reports, feature requests)
+Pull requests (to propose changes and discuss them before merging)
+Collaboration tools (teams, permissions, etc.)
+GitHub Actions (for continuous integration/continuous delivery)
+
+
+stages 
+----------
+working directory 
+staging area
+local repository 
+remote repository 
+---------------------------
+working directory 
+------------------------------
+What it is: The actual files and folders you're working on in your local project directory.
+
+Details:
+
+These are the uncommitted changes you're editing.
+Git monitors this area for changes.
+
+Command: git status shows changes in the working directory.
+-------------------------------------------------------
+2. Staging Area (Index):
+---------------------------------------------------------
+What it is: A temporary area where you prepare (stage) changes before committing them.
+
+Details:
+
+You decide which changes should be included in the next commit.
+Useful for breaking up changes into meaningful commits.
+
+Command:
+
+git add <file> adds a file to the staging area.
+git reset <file> removes it from the staging area.
+---------------------------------------------------------
+3. Local Repository:
+----------------------------------------------------------
+What it is: The .git directory in your project folder that stores the commit history.
+
+Details:
+
+When you run git commit, your changes in the staging area are saved to the local repository.
+You can view this history with git log.
+---------------------------------------------------
+4. Remote Repository:
+------------------------------------------------------------------
+What it is: A version of your repository hosted on a remote server (e.g., GitHub, GitLab).
+
+Details:
+
+Used for collaboration and backup.
+You can push and pull changes between your local repo and the remote one.
+
+Commands:
+
+git push – send your commits to the remote repository.
+git pull – fetch and merge changes from the remote to your local repo.
+git clone – copy a remote repository to your local machine.
+
+[Working Directory] 
+     ↓ git add
+[Staging Area]
+     ↓ git commit
+[Local Repository]
+     ↓ git push
+[Remote Repository]
+
+
+vamsi bavani 
+----------------------
+vcs & git repo 
+stagging area & commit 
+Branches 
+Issues & pull requests
+
+---------------------------
+git hub is one example of remote respository hosting services
+ 
