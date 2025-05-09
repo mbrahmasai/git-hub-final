@@ -1,1 +1,16 @@
 this is for pull request 
+git checkout -b main2
+git add ex3.txt 
+git status 
+git commit -m "pr"
+git push -u origin main2
+
+compare and pull request 
+
+
+hi this is new change
+want
+
+this is alll2 
+
+dfhsh

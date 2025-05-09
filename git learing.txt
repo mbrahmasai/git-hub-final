@@ -1,3 +1,5 @@
+https://git-scm.com/docs/
+
 git is version control system (VCS).It’s  helps you track changes to your code over time. It allows multiple developers to work on the same project without stepping on each other's toes, and it maintains a history of changes to revert back to previous versions if needed.
 
 How it works: Git runs locally on your machine. You initialize a Git repository within a project directory, and then you can commit changes, create branches, merge them, and push/pull changes to/from a remote repository.
@@ -33,6 +35,7 @@ What it is: The actual files and folders you're working on in your local project
 
 Details:
 
+untracked files are present in working directory .
 These are the uncommitted changes you're editing.
 Git monitors this area for changes.
 
@@ -46,7 +49,12 @@ Details:
 
 You decide which changes should be included in the next commit.
 Useful for breaking up changes into meaningful commits.
+tracked files present in staging area
 
+note : 
+from working directory to staging area u have option to send single or multi 
+
+ but in staging to local and local repo to remote repo, . all files present in local are push to remote there is no feature to send single
 Command:
 
 git add <file> adds a file to the staging area.
@@ -95,3 +103,50 @@ Issues & pull requests
 ---------------------------
 git hub is one example of remote respository hosting services
  
+
+1. push code from working directory to remote repo
+
+git init  
+git status 
+git add file_name // single file 
+git add file1 file2  // multiple files 
+git add .            // all files 
+
+
+
+need to identify the person who are commited  , use both Commands
+-----------------------------------------------------------------
+git config --global user.email "brahmasaicloud@gmail.com"
+git config --global user.name "Brahmasai"
+
+git commit -m "message1 = committing code and example"
+
+git branch -M main // create main branch if it is needed 
+
+git remote add origin https://github.com/mbrahmasai/git-hub-final.git         // save the repo where u want to add this commit 
+
+git push -u origin main   // push the commit which branch u want
+
+---------------------------
+Branches
+-----------------------------
+branches are copies of main / master 
+
+git checkout -b  main   // jump btw the branches  -b is used if branch is not availble then will created and switch to that branch , after the create the branch without saving any file then to another branch that created branch is deleted 
+
+
+git branch   // check what are branches available in repo
+
+----------------------------
+cherry-pick
+-------------------------
+it is used to select and apply specfic commits from one branch to another branch 
+
+git checkout target_branch_name
+git cherry-pick <commit-hash>
+commit-hash = commit-id = 3y2tgug2i
+git log --oneline  //get commit hash
+git log --oneline --all
+
+
+git cherry-pick <commit-hash> -e // to change commit message
